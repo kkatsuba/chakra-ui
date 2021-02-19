@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.6.3
+
+### Patch Changes
+
+- [`64b325493`](https://github.com/chakra-ui/chakra-ui/commit/64b325493fcf3f243b129bcd018cfef9f3f3b26b)
+  Thanks [@psujit](https://github.com/psujit)! - Allow halved values in design
+  token in Spacing as mentioned in the documents
+
 ## 1.6.2
 
 ### Patch Changes
