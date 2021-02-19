@@ -1,3 +1,7 @@
+/**
+ * This file will be replaced by running "npx @chakra-ui/cli tokens"
+ */
+
 export interface ThemeTypings extends EmptyThemeTypings {}
 
 export interface EmptyThemeTypings {

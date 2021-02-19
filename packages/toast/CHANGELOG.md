@@ -1,5 +1,60 @@
 # Change Log
 
+## 1.1.11
+
+### Patch Changes
+
+- Updated dependencies
+  [[`e8113d3ca`](https://github.com/chakra-ui/chakra-ui/commit/e8113d3ca66e9d45ac2dbb7109ff8904cbfd1134),
+  [`d6808f0a4`](https://github.com/chakra-ui/chakra-ui/commit/d6808f0a4ae6ad426b498e9556c76071f7aa9848),
+  [`8597f58b7`](https://github.com/chakra-ui/chakra-ui/commit/8597f58b7d5c1fe401086d28a379bc1727756c5b)]:
+  - @chakra-ui/theme@1.6.2
+
+## 1.1.10
+
+### Patch Changes
+
+- Updated dependencies
+  [[`f3ba8dd53`](https://github.com/chakra-ui/chakra-ui/commit/f3ba8dd53abc697c096165185764235012ada90f)]:
+  - @chakra-ui/theme@1.6.1
+
+## 1.1.9
+
+### Patch Changes
+
+- [`f50934bdd`](https://github.com/chakra-ui/chakra-ui/commit/f50934bdd5ec47396464a0f4cb02af732f835ee5)
+  [#3228](https://github.com/chakra-ui/chakra-ui/pull/3228) Thanks
+  [@TimKolberger](https://github.com/TimKolberger)! - Updated peer dependency
+  version of @reach/alert to fix installation of @chakra-ui with npm v7
+- Updated dependencies
+  [[`a023a269f`](https://github.com/chakra-ui/chakra-ui/commit/a023a269ffe0efdae74be3de28e41790c9a5ca8a),
+  [`2861b613b`](https://github.com/chakra-ui/chakra-ui/commit/2861b613bf354e6d00de01bf12bb543b2f2c2532),
+  [`ff4a36bca`](https://github.com/chakra-ui/chakra-ui/commit/ff4a36bca11cc177830f6f1da13700acd1e3a087),
+  [`408aaaace`](https://github.com/chakra-ui/chakra-ui/commit/408aaaace0dd413b61354958a4c30b9f2f8aa376),
+  [`483687237`](https://github.com/chakra-ui/chakra-ui/commit/483687237f2c4fed05dc6a79693f307c601c1285),
+  [`61962345c`](https://github.com/chakra-ui/chakra-ui/commit/61962345c5b1c862445c16c586e304b28c376c9a)]:
+  - @chakra-ui/theme@1.6.0
+  - @chakra-ui/utils@1.2.0
+  - @chakra-ui/alert@1.1.1
+  - @chakra-ui/close-button@1.1.1
+  - @chakra-ui/hooks@1.1.4
+  - @chakra-ui/transition@1.0.8
+
+## 1.1.8
+
+### Patch Changes
+
+- Updated dependencies
+  [[`20fb74c07`](https://github.com/chakra-ui/chakra-ui/commit/20fb74c074fbb4f229c9613f91de65e824309c07),
+  [`90c7a4fbf`](https://github.com/chakra-ui/chakra-ui/commit/90c7a4fbfde69c01395ffe2876d7348dd72ea65a),
+  [`709ca0398`](https://github.com/chakra-ui/chakra-ui/commit/709ca0398a8c82c55b85c1364d80b90c5e075257),
+  [`b572bceed`](https://github.com/chakra-ui/chakra-ui/commit/b572bceedd9fb0c41c65118f0d9ba672791932ca)]:
+  - @chakra-ui/theme@1.5.0
+  - @chakra-ui/alert@1.1.0
+  - @chakra-ui/close-button@1.1.0
+  - @chakra-ui/hooks@1.1.3
+  - @chakra-ui/transition@1.0.7
+
 ## 1.1.7
 
 ### Patch Changes

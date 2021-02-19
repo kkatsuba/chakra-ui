@@ -1,5 +1,60 @@
 # Change Log
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`51ad518e2`](https://github.com/chakra-ui/chakra-ui/commit/51ad518e22642076485bee3dd1f99acbf025161b)]:
+  - @chakra-ui/popper@1.1.4
+
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies
+  [[`ff4a36bca`](https://github.com/chakra-ui/chakra-ui/commit/ff4a36bca11cc177830f6f1da13700acd1e3a087),
+  [`483687237`](https://github.com/chakra-ui/chakra-ui/commit/483687237f2c4fed05dc6a79693f307c601c1285),
+  [`61962345c`](https://github.com/chakra-ui/chakra-ui/commit/61962345c5b1c862445c16c586e304b28c376c9a)]:
+  - @chakra-ui/utils@1.2.0
+  - @chakra-ui/clickable@1.0.4
+  - @chakra-ui/hooks@1.1.4
+  - @chakra-ui/popper@1.1.3
+  - @chakra-ui/transition@1.0.8
+  - @chakra-ui/descendant@1.0.7
+
+## 1.1.0
+
+### Minor Changes
+
+- [`68694e5ab`](https://github.com/chakra-ui/chakra-ui/commit/68694e5ab774a5981be943acb705e6e0af34e870)
+  [#3141](https://github.com/chakra-ui/chakra-ui/pull/3141) Thanks
+  [@dodas](https://github.com/dodas)! - - The `MenuItem` now accepts a
+  `commandSpacing` prop that can be used to adjust the space between the command
+  and label.
+
+  - Add support `rootProps` to `MenuList` so it's possible override the styles
+    for root container for menu list. Common use case is to change the applied
+    `zIndex` of the menulist.
+
+  - Make it possible to override `zIndex` by passing props to `MenuList`
+
+* [`90c7a4fbf`](https://github.com/chakra-ui/chakra-ui/commit/90c7a4fbfde69c01395ffe2876d7348dd72ea65a)
+  [#3092](https://github.com/chakra-ui/chakra-ui/pull/3092) Thanks
+  [@TimKolberger](https://github.com/TimKolberger)! - - Improved theme typing in
+  order to provide a better autocomplete experience
+  - Fixed a type issue where pseudo style props like `_hover` and `_active`
+    didn't allow regular css properties
+
+### Patch Changes
+
+- Updated dependencies
+  [[`b572bceed`](https://github.com/chakra-ui/chakra-ui/commit/b572bceedd9fb0c41c65118f0d9ba672791932ca)]:
+  - @chakra-ui/hooks@1.1.3
+  - @chakra-ui/descendant@1.0.6
+  - @chakra-ui/popper@1.1.2
+  - @chakra-ui/transition@1.0.7
+
 ## 1.0.6
 
 ### Patch Changes

@@ -3,6 +3,8 @@ name: Publish to NPM
 on:
   push:
     paths:
+      - ".changeset/**"
+      - "tooling/**"
       - "packages/**"
     branches:
       - main
@@ -43,6 +45,15 @@ jobs:
         run: |
           git config --global user.email "joseshegs@gmail.com"
           git config --global user.name "Sage"
+
+      - name: Build packages
+        run: yarn build
+
+      - name: Build CRA templates
+        run: yarn build:templates ../cra-templates
+
+      - name: Run tests
+        run: yarn test
 
       - name: Publish packages
         uses: changesets/action@master

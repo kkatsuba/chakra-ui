@@ -21,19 +21,11 @@ export interface StyleProps
     System.OutlineProps,
     System.OtherProps {}
 
-export interface ApplyPropStyles {
-  /**
-   * Apply theme-aware style objects in `theme`
-   */
-  apply?: ResponsiveValue<string>
-}
-
 export interface SystemCSSProperties
   extends CSS.Properties,
-    Omit<StyleProps, keyof CSS.Properties>,
-    ApplyPropStyles {}
+    Omit<StyleProps, keyof CSS.Properties> {}
 
-type ThemeThunk<T> = T | ((theme: Dict) => T)
+export type ThemeThunk<T> = T | ((theme: Dict) => T)
 
 type PropertyValue<K extends keyof SystemCSSProperties> = ThemeThunk<
   ResponsiveValue<boolean | number | string | SystemCSSProperties[K]>
@@ -49,13 +41,13 @@ type PseudoKeys = keyof CSS.Pseudos | keyof Pseudos
 
 type PseudoSelectorDefinition<D> = D | RecursivePseudo<D>
 
-type RecursivePseudo<D> = {
+export type RecursivePseudo<D> = {
   [K in PseudoKeys]?: PseudoSelectorDefinition<D> & D
 }
 
 type CSSDefinition<D> = D | string | RecursiveCSSSelector<D | string>
 
-interface RecursiveCSSSelector<D> {
+export interface RecursiveCSSSelector<D> {
   [selector: string]: CSSDefinition<D> & D
 }
 

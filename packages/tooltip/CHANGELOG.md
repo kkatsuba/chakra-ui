@@ -1,5 +1,74 @@
 # Change Log
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`51ad518e2`](https://github.com/chakra-ui/chakra-ui/commit/51ad518e22642076485bee3dd1f99acbf025161b)]:
+  - @chakra-ui/popper@1.1.4
+
+## 1.1.1
+
+### Patch Changes
+
+- [`a023a269f`](https://github.com/chakra-ui/chakra-ui/commit/a023a269ffe0efdae74be3de28e41790c9a5ca8a)
+  [#3278](https://github.com/chakra-ui/chakra-ui/pull/3278) Thanks
+  [@dodas](https://github.com/dodas)! - Fixed an issue where a `Tooltip` with
+  negative `gutter` causes flickering on hover.
+- Updated dependencies
+  [[`ff4a36bca`](https://github.com/chakra-ui/chakra-ui/commit/ff4a36bca11cc177830f6f1da13700acd1e3a087),
+  [`483687237`](https://github.com/chakra-ui/chakra-ui/commit/483687237f2c4fed05dc6a79693f307c601c1285),
+  [`61962345c`](https://github.com/chakra-ui/chakra-ui/commit/61962345c5b1c862445c16c586e304b28c376c9a)]:
+  - @chakra-ui/utils@1.2.0
+  - @chakra-ui/visually-hidden@1.0.4
+  - @chakra-ui/hooks@1.1.4
+  - @chakra-ui/popper@1.1.3
+  - @chakra-ui/portal@1.1.1
+
+## 1.1.0
+
+### Minor Changes
+
+- [`14be4be2c`](https://github.com/chakra-ui/chakra-ui/commit/14be4be2c6f64896612cb05d7e56c2c5e4015335)
+  [#3210](https://github.com/chakra-ui/chakra-ui/pull/3210) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Add support for forwarding
+  props to the underlying `Portal` component. Pass the `portalProps` prop to
+  achive this.
+
+  The 2 props you can pass to the portalProps are:
+
+  - `containerRef`: `ref` for the element where to mount the portal
+  - `appendToParentPortal`: If `false`, it'll opt out of portal nesting
+
+  ```jsx
+  <Modal portalProps={{ containerRef: ref }}>
+    <ModalOverlay />
+    <ModalContent>
+      <Box>Modal content</Box>
+      <Tooltip portalProps={{ appendToParentPortal: false }}>
+        Some tooltip
+      </Tooltip>
+    </ModalContent>
+  </Modal>
+  ```
+
+* [`90c7a4fbf`](https://github.com/chakra-ui/chakra-ui/commit/90c7a4fbfde69c01395ffe2876d7348dd72ea65a)
+  [#3092](https://github.com/chakra-ui/chakra-ui/pull/3092) Thanks
+  [@TimKolberger](https://github.com/TimKolberger)! - - Improved theme typing in
+  order to provide a better autocomplete experience
+  - Fixed a type issue where pseudo style props like `_hover` and `_active`
+    didn't allow regular css properties
+
+### Patch Changes
+
+- Updated dependencies
+  [[`b572bceed`](https://github.com/chakra-ui/chakra-ui/commit/b572bceedd9fb0c41c65118f0d9ba672791932ca),
+  [`e41e6b81b`](https://github.com/chakra-ui/chakra-ui/commit/e41e6b81bf6943fef9b34e5ddd31ee57b416a426)]:
+  - @chakra-ui/hooks@1.1.3
+  - @chakra-ui/portal@1.1.0
+  - @chakra-ui/popper@1.1.2
+
 ## 1.0.6
 
 ### Patch Changes

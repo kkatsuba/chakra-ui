@@ -1,5 +1,88 @@
 # Change Log
 
+## 1.1.5
+
+### Patch Changes
+
+- Updated dependencies
+  [[`b78345c36`](https://github.com/chakra-ui/chakra-ui/commit/b78345c366ff79e1a2b5fb77d969f9ee8ced1ac8),
+  [`5a8d8c054`](https://github.com/chakra-ui/chakra-ui/commit/5a8d8c054aa3ecdfac51e355b61ac1ae6214f2d5),
+  [`8597f58b7`](https://github.com/chakra-ui/chakra-ui/commit/8597f58b7d5c1fe401086d28a379bc1727756c5b)]:
+  - @chakra-ui/cli@1.2.1
+  - @chakra-ui/react@1.3.3
+  - @chakra-ui/props-docs@1.0.17
+
+## 1.1.4
+
+### Patch Changes
+
+- Updated dependencies
+  [[`f3ba8dd53`](https://github.com/chakra-ui/chakra-ui/commit/f3ba8dd53abc697c096165185764235012ada90f)]:
+  - @chakra-ui/react@1.3.2
+  - @chakra-ui/props-docs@1.0.16
+
+## 1.1.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @chakra-ui/react@1.3.1
+  - @chakra-ui/props-docs@1.0.15
+
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`a97e42568`](https://github.com/chakra-ui/chakra-ui/commit/a97e42568c4470d6cd1e16b48429af93c52def49),
+  [`0100edbf0`](https://github.com/chakra-ui/chakra-ui/commit/0100edbf05c108c7d4725616dbbe9788a39da809),
+  [`ff4a36bca`](https://github.com/chakra-ui/chakra-ui/commit/ff4a36bca11cc177830f6f1da13700acd1e3a087),
+  [`408aaaace`](https://github.com/chakra-ui/chakra-ui/commit/408aaaace0dd413b61354958a4c30b9f2f8aa376),
+  [`483687237`](https://github.com/chakra-ui/chakra-ui/commit/483687237f2c4fed05dc6a79693f307c601c1285),
+  [`61962345c`](https://github.com/chakra-ui/chakra-ui/commit/61962345c5b1c862445c16c586e304b28c376c9a)]:
+  - @chakra-ui/cli@1.2.0
+  - @chakra-ui/react@1.3.0
+  - @chakra-ui/utils@1.2.0
+  - @chakra-ui/props-docs@1.0.14
+  - @chakra-ui/theme-tools@1.0.4
+
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies
+  [[`693528a1b`](https://github.com/chakra-ui/chakra-ui/commit/693528a1b73af2eeb462371a61ff2957c6f65810)]:
+  - @chakra-ui/cli@1.1.0
+  - @chakra-ui/react@1.2.1
+  - @chakra-ui/props-docs@1.0.13
+
+## 1.1.0
+
+### Minor Changes
+
+- [`90c7a4fbf`](https://github.com/chakra-ui/chakra-ui/commit/90c7a4fbfde69c01395ffe2876d7348dd72ea65a)
+  [#3092](https://github.com/chakra-ui/chakra-ui/pull/3092) Thanks
+  [@TimKolberger](https://github.com/TimKolberger)! - - Improved theme typing in
+  order to provide a better autocomplete experience
+  - Fixed a type issue where pseudo style props like `_hover` and `_active`
+    didn't allow regular css properties
+
+### Patch Changes
+
+- [`c61ed9f52`](https://github.com/chakra-ui/chakra-ui/commit/c61ed9f523e855bc1343d6b15f6b9fb770c026ea)
+  [#3155](https://github.com/chakra-ui/chakra-ui/pull/3155) Thanks
+  [@jungaretti](https://github.com/jungaretti)! - - Correct capitalization of
+  `rightIcon` prop
+  - Add `LinkOverlay` docs
+  - Restructure component groupings and add permanent redirects
+  - Add docs for `Portal` component
+- Updated dependencies
+  [[`408096ca3`](https://github.com/chakra-ui/chakra-ui/commit/408096ca377197e46e2c9eb13e0ea33c46355b38),
+  [`90c7a4fbf`](https://github.com/chakra-ui/chakra-ui/commit/90c7a4fbfde69c01395ffe2876d7348dd72ea65a),
+  [`fa2083807`](https://github.com/chakra-ui/chakra-ui/commit/fa2083807f8372dc054261a214d66545ab7cac14)]:
+  - @chakra-ui/react@1.2.0
+  - @chakra-ui/props-docs@1.0.12
+
 ## 1.0.11
 
 ### Patch Changes

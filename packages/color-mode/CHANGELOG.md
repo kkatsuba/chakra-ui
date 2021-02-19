@@ -1,5 +1,44 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+- [`7f3bb3584`](https://github.com/chakra-ui/chakra-ui/commit/7f3bb35841f81e9e29a356b3070ac9fd28352731)
+  [#3322](https://github.com/chakra-ui/chakra-ui/pull/3322) Thanks
+  [@dodas](https://github.com/dodas)! - You can now customize the `nonce` of the
+  `<script>` that `ColorModeScript` creates by passing `nonce` prop.
+
+## 1.0.7
+
+### Patch Changes
+
+- [`9dc37ee37`](https://github.com/chakra-ui/chakra-ui/commit/9dc37ee37575650746e9b006e41428f1bf53e16c)
+  [#3280](https://github.com/chakra-ui/chakra-ui/pull/3280) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where reading
+  from localStorage maybe fail due to several reasons (SecurityError, Uncaught
+  DOMException, TypeError, etc.)
+
+- Updated dependencies
+  [[`ff4a36bca`](https://github.com/chakra-ui/chakra-ui/commit/ff4a36bca11cc177830f6f1da13700acd1e3a087),
+  [`483687237`](https://github.com/chakra-ui/chakra-ui/commit/483687237f2c4fed05dc6a79693f307c601c1285),
+  [`61962345c`](https://github.com/chakra-ui/chakra-ui/commit/61962345c5b1c862445c16c586e304b28c376c9a)]:
+  - @chakra-ui/utils@1.2.0
+  - @chakra-ui/hooks@1.1.4
+
+## 1.0.6
+
+### Patch Changes
+
+- [`e859a9fc1`](https://github.com/chakra-ui/chakra-ui/commit/e859a9fc1bd906801a490dceeb507cca0684a192)
+  [#3133](https://github.com/chakra-ui/chakra-ui/pull/3133) Thanks
+  [@chrisbull](https://github.com/chrisbull)! - `useColorModeValue` defaults to
+  light mode on first render if system color mode is used.
+
+- Updated dependencies
+  [[`b572bceed`](https://github.com/chakra-ui/chakra-ui/commit/b572bceedd9fb0c41c65118f0d9ba672791932ca)]:
+  - @chakra-ui/hooks@1.1.3
+
 ## 1.0.5
 
 ### Patch Changes

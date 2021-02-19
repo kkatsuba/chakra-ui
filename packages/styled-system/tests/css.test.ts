@@ -238,6 +238,30 @@ test("handles negative margins from scale", () => {
   })
 })
 
+test("handles negative values from custom css var scale", () => {
+  const customTheme = {
+    ...theme,
+    space: ["var(--size-0)", "var(--size-1)", "var(--size-2)", "var(--size-3)"],
+  }
+  const result = css({
+    mt: -1,
+    mx: -2,
+    top: -3,
+    right: -3,
+    bottom: -3,
+    left: -3,
+  })(customTheme)
+  expect(result).toEqual({
+    marginTop: `calc(var(--size-1) * -1)`,
+    marginLeft: `calc(var(--size-2) * -1)`,
+    marginRight: `calc(var(--size-2) * -1)`,
+    top: `calc(var(--size-3) * -1)`,
+    right: `calc(var(--size-3) * -1)`,
+    bottom: `calc(var(--size-3) * -1)`,
+    left: `calc(var(--size-3) * -1)`,
+  })
+})
+
 test("handles negative top, left, bottom, and right from scale", () => {
   const result = css({
     top: -1,
@@ -492,4 +516,62 @@ test("pseudo selectors are transformed", () => {
       paddingRight: 4,
     },
   })
+})
+
+test("should expand textStyle and layerStyle", () => {
+  const theme = {
+    colors: { red: { 300: "#red" } },
+    breakpoints: createBreakpoints({
+      sm: "400px",
+      md: "768px",
+      lg: "1200px",
+      xl: "1800px",
+    }),
+    layerStyles: {
+      v1: {
+        color: "red.300",
+        bg: "tomato",
+      },
+    },
+    textStyles: {
+      caps: {
+        textTransform: "uppercase",
+        letterSpacing: "wide",
+        fontSize: "lg",
+      },
+      lower: {
+        textTransform: "lowercase",
+        letterSpacing: "0.2px",
+        fontSize: "sm",
+      },
+    },
+  }
+
+  expect(css({ layerStyle: "v1" })(theme)).toMatchInlineSnapshot(`
+    Object {
+      "background": "tomato",
+      "color": "#red",
+    }
+  `)
+
+  expect(css({ textStyle: "caps" })(theme)).toMatchInlineSnapshot(`
+    Object {
+      "fontSize": "lg",
+      "letterSpacing": "wide",
+      "textTransform": "uppercase",
+    }
+  `)
+
+  expect(css({ textStyle: ["caps", "lower"] })(theme)).toMatchInlineSnapshot(`
+    Object {
+      "@media screen and (min-width: 400px)": Object {
+        "fontSize": "sm",
+        "letterSpacing": "0.2px",
+        "textTransform": "lowercase",
+      },
+      "fontSize": "lg",
+      "letterSpacing": "wide",
+      "textTransform": "uppercase",
+    }
+  `)
 })
