@@ -1,6 +1,6 @@
 {
   "name": "@chakra-ui/system",
-  "version": "1.6.7",
+  "version": "1.7.0",
   "description": "Chakra UI system primitives",
   "keywords": [
     "system",
@@ -54,7 +54,7 @@
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@chakra-ui/color-mode": "1.1.8",
+    "@chakra-ui/color-mode": "1.1.9",
     "@chakra-ui/react-utils": "1.1.2",
     "@chakra-ui/styled-system": "1.11.1",
     "@chakra-ui/utils": "1.8.0",
