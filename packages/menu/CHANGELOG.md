@@ -1,5 +1,165 @@
 # Change Log
 
+## 1.6.3
+
+### Patch Changes
+
+- [`5e24481fc`](https://github.com/chakra-ui/chakra-ui/commit/5e24481fc73b0097d0bac900479d7cc145a92670)
+  [#4026](https://github.com/chakra-ui/chakra-ui/pull/4026) Thanks
+  [@dodas](https://github.com/dodas)! - Add `enabled` option to `usePopper`
+  hook.
+
+  The `popper.js` instance will not be created until this option is `true`.
+
+  `Menu`, `Popover` and `Tooltip` components now use this option, so the
+  `popper.js` instance is created only once the popper is open. This should
+  significantly improve render and scroll performance.
+
+- Updated dependencies
+  [[`5e24481fc`](https://github.com/chakra-ui/chakra-ui/commit/5e24481fc73b0097d0bac900479d7cc145a92670)]:
+  - @chakra-ui/popper@2.2.0
+
+## 1.6.2
+
+### Patch Changes
+
+- [`e190ce1b3`](https://github.com/chakra-ui/chakra-ui/commit/e190ce1b30e17eb0cffaa00c7ec2660d25ba6c23)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where
+  keyboard navigation doesn't work `isLazy` is passed.
+
+* [`8dc0622e8`](https://github.com/chakra-ui/chakra-ui/commit/8dc0622e8a5acda768c694d2daa28a4181d829ad)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where
+  typeaheaad overrides input keydown
+
+* Updated dependencies
+  [[`c1f8d90ad`](https://github.com/chakra-ui/chakra-ui/commit/c1f8d90ad7ebd9594e9888010170cda7969f0ded)]:
+  - @chakra-ui/transition@1.3.1
+
+## 1.6.1
+
+### Patch Changes
+
+- [`ad87d837a`](https://github.com/chakra-ui/chakra-ui/commit/ad87d837a9b7b117cec35d0819cc1f4c72769923)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where
+  `closeOnSelect` didn't work for menuitem options
+
+- Updated dependencies
+  [[`d0f50a46e`](https://github.com/chakra-ui/chakra-ui/commit/d0f50a46ea6c2bcf06d8cad8b9b3994fd934be01),
+  [`b199b06e3`](https://github.com/chakra-ui/chakra-ui/commit/b199b06e33924bdf98c9c13868f14172a20d0248),
+  [`173738dd9`](https://github.com/chakra-ui/chakra-ui/commit/173738dd938903d2b0fcdc666a7c9f4fe13e2bd6),
+  [`b479ff22e`](https://github.com/chakra-ui/chakra-ui/commit/b479ff22ea10c1a1393224c37c36aa6ceabc4aab),
+  [`07d15eab4`](https://github.com/chakra-ui/chakra-ui/commit/07d15eab480724f8fee1a09b7cecdf1e968d9ddd),
+  [`d0f50a46e`](https://github.com/chakra-ui/chakra-ui/commit/d0f50a46ea6c2bcf06d8cad8b9b3994fd934be01)]:
+  - @chakra-ui/utils@1.8.0
+  - @chakra-ui/transition@1.3.0
+  - @chakra-ui/descendant@2.0.1
+  - @chakra-ui/hooks@1.5.2
+  - @chakra-ui/clickable@1.1.5
+
+## 1.6.0
+
+### Minor Changes
+
+- [`d14c97420`](https://github.com/chakra-ui/chakra-ui/commit/d14c974203fe8c1a525d8932d5c8d0ae7d1fa84e)
+  [#3864](https://github.com/chakra-ui/chakra-ui/pull/3864) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - - Update menu to use new
+  descendants logic.
+  - Fix issue where menu doesn't select menu item when the first item is
+    disabled.
+  - Fix issue where menu doesn't work when an input is used within it.
+
+### Patch Changes
+
+- [`1f94620a1`](https://github.com/chakra-ui/chakra-ui/commit/1f94620a11dc616f0982321114a9a236bbf872d2)
+  [#3863](https://github.com/chakra-ui/chakra-ui/pull/3863) Thanks
+  [@isBatak](https://github.com/isBatak)! - Fix issue where menu button doesn't
+  work with truncated text
+
+- Updated dependencies
+  [[`82f08867f`](https://github.com/chakra-ui/chakra-ui/commit/82f08867fa4825d647a3b9cc805220d9364f2f3f),
+  [`82f08867f`](https://github.com/chakra-ui/chakra-ui/commit/82f08867fa4825d647a3b9cc805220d9364f2f3f),
+  [`e9ac4cc76`](https://github.com/chakra-ui/chakra-ui/commit/e9ac4cc7629cd79efc753b4e3353bacdad46cd7d)]:
+  - @chakra-ui/react-utils@1.1.2
+  - @chakra-ui/descendant@2.0.0
+  - @chakra-ui/utils@1.7.0
+  - @chakra-ui/clickable@1.1.4
+  - @chakra-ui/hooks@1.5.1
+  - @chakra-ui/popper@2.1.2
+  - @chakra-ui/transition@1.2.2
+
+## 1.5.0
+
+### Minor Changes
+
+- [`f2544fb58`](https://github.com/chakra-ui/chakra-ui/commit/f2544fb581a6dbe558236ebb11883a273ed61a28)
+  [#3839](https://github.com/chakra-ui/chakra-ui/pull/3839) Thanks
+  [@with-heart](https://github.com/with-heart)! - This change restores the
+  behavior of the `isLazy` prop (which was broken by the previous release) and
+  adds a new `lazyBehavior` prop which configures the behavior of `isLazy`.
+
+  If you'd like the content of tab panel, popover and menu components to be
+  unmounted when not selected or opened, please continue to use `isLazy`. This
+  is the default behavior.
+
+  If you'd like the content of tab panel, popover and menu components to remain
+  mounted (but hidden) after it was previously selected or opened, use
+  `lazyBehavior="keepMounted"` in combination with `isLazy`.
+
+### Patch Changes
+
+- [`57baa5e63`](https://github.com/chakra-ui/chakra-ui/commit/57baa5e6350f89f1098a5d965b90483348aa0073)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Make it possible to
+  pass popper.js props to popover and menu
+
+- Updated dependencies
+  [[`0974e547c`](https://github.com/chakra-ui/chakra-ui/commit/0974e547c29e4efc1ba4d1eb1507d0dad7d7a77a),
+  [`59ea894a7`](https://github.com/chakra-ui/chakra-ui/commit/59ea894a7e03d16cd7a1b89d00816eafa9fab65d),
+  [`384902e35`](https://github.com/chakra-ui/chakra-ui/commit/384902e35b186c8c8154b9569455c27f72ee0f6f)]:
+  - @chakra-ui/utils@1.6.0
+  - @chakra-ui/hooks@1.5.0
+  - @chakra-ui/clickable@1.1.3
+  - @chakra-ui/transition@1.2.1
+  - @chakra-ui/descendant@1.1.3
+
+## 1.4.0
+
+### Minor Changes
+
+- [`29148130a`](https://github.com/chakra-ui/chakra-ui/commit/29148130a699409322931cc6ba1b970b7afeefbd)
+  [#3762](https://github.com/chakra-ui/chakra-ui/pull/3762) Thanks
+  [@franky47](https://github.com/franky47)! - Add `closeOnSelect` to `MenuItem`
+  and `MenuItemOption`.
+
+  This allows menu items to override their parent `Menu`'s `closeOnSelect`
+  behavior.
+
+  Can be useful for menus with a combination of `MenuItem`s (that generally
+  close their menu when selected) and `MenuItemOption`s (that should keep the
+  menu open for further edition).
+
+### Patch Changes
+
+- [`a588116f9`](https://github.com/chakra-ui/chakra-ui/commit/a588116f92911769334132d90ccec01d49f029aa)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - - Do not unmount
+  menu list after first render
+
+* [`d37b00021`](https://github.com/chakra-ui/chakra-ui/commit/d37b00021490c24bd3168a7f2800b6490aee90b1)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Use prop getter
+  from use-popper to prevent ssr content jump
+
+* Updated dependencies
+  [[`8b5eb9654`](https://github.com/chakra-ui/chakra-ui/commit/8b5eb9654affe562795d38a19f732f84732a949d),
+  [`5617aabea`](https://github.com/chakra-ui/chakra-ui/commit/5617aabeaa6c3faef37deeebeddbc9bf3cc88088),
+  [`d1532f0b7`](https://github.com/chakra-ui/chakra-ui/commit/d1532f0b72c36d0609ee4510613d7c76f4f9c113),
+  [`1615af488`](https://github.com/chakra-ui/chakra-ui/commit/1615af4881a6f37cffb7ea15078cf7ab6a4e4c79),
+  [`a73198529`](https://github.com/chakra-ui/chakra-ui/commit/a7319852908f68596600da799ef08a0e7dbb468e)]:
+  - @chakra-ui/utils@1.5.2
+  - @chakra-ui/transition@1.2.0
+  - @chakra-ui/hooks@1.4.0
+  - @chakra-ui/popper@2.1.1
+  - @chakra-ui/clickable@1.1.2
+  - @chakra-ui/descendant@1.1.2
+
 ## 1.3.1
 
 ### Patch Changes

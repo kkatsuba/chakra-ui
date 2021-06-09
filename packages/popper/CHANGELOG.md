@@ -1,5 +1,37 @@
 # Change Log
 
+## 2.2.0
+
+### Minor Changes
+
+- [`5e24481fc`](https://github.com/chakra-ui/chakra-ui/commit/5e24481fc73b0097d0bac900479d7cc145a92670)
+  [#4026](https://github.com/chakra-ui/chakra-ui/pull/4026) Thanks
+  [@dodas](https://github.com/dodas)! - Add `enabled` option to `usePopper`
+  hook.
+
+  The `popper.js` instance will not be created until this option is `true`.
+
+  `Menu`, `Popover` and `Tooltip` components now use this option, so the
+  `popper.js` instance is created only once the popper is open. This should
+  significantly improve render and scroll performance.
+
+## 2.1.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`82f08867f`](https://github.com/chakra-ui/chakra-ui/commit/82f08867fa4825d647a3b9cc805220d9364f2f3f)]:
+  - @chakra-ui/react-utils@1.1.2
+
+## 2.1.1
+
+### Patch Changes
+
+- [`1615af488`](https://github.com/chakra-ui/chakra-ui/commit/1615af4881a6f37cffb7ea15078cf7ab6a4e4c79)
+  [#3786](https://github.com/chakra-ui/chakra-ui/pull/3786) Thanks
+  [@navarroaxel](https://github.com/navarroaxel)! - Update README for the
+  `popper.js` wrapper.
+
 ## 2.1.0
 
 ### Minor Changes

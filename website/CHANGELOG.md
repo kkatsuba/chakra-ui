@@ -1,5 +1,87 @@
 # Change Log
 
+## 1.2.7
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @chakra-ui/react@1.6.3
+  - @chakra-ui/props-docs@1.0.28
+
+## 1.2.6
+
+### Patch Changes
+
+- Updated dependencies
+  [[`ddd5ef4a1`](https://github.com/chakra-ui/chakra-ui/commit/ddd5ef4a1e9cc988c99b80c26579205ea4c57b2f)]:
+  - @chakra-ui/react@1.6.2
+  - @chakra-ui/props-docs@1.0.27
+
+## 1.2.5
+
+### Patch Changes
+
+- Updated dependencies
+  [[`d0f50a46e`](https://github.com/chakra-ui/chakra-ui/commit/d0f50a46ea6c2bcf06d8cad8b9b3994fd934be01),
+  [`b479ff22e`](https://github.com/chakra-ui/chakra-ui/commit/b479ff22ea10c1a1393224c37c36aa6ceabc4aab),
+  [`07d15eab4`](https://github.com/chakra-ui/chakra-ui/commit/07d15eab480724f8fee1a09b7cecdf1e968d9ddd),
+  [`e8f64a4a6`](https://github.com/chakra-ui/chakra-ui/commit/e8f64a4a6ab5eac862ec8127dcf6c5852a0f84dd)]:
+  - @chakra-ui/utils@1.8.0
+  - @chakra-ui/cli@1.3.1
+  - @chakra-ui/react@1.6.1
+  - @chakra-ui/theme-tools@1.1.7
+  - @chakra-ui/props-docs@1.0.26
+
+## 1.2.4
+
+### Patch Changes
+
+- [`e7261d536`](https://github.com/chakra-ui/chakra-ui/commit/e7261d536caf95ced36bf20931cdcd3bc7b31a4e)
+  [#3841](https://github.com/chakra-ui/chakra-ui/pull/3841) Thanks
+  [@LekoArts](https://github.com/LekoArts)! - Updates to Gatsby-related
+  documentation to account for the breaking changes made in
+  [PR #3841](https://github.com/chakra-ui/chakra-ui/pull/3841). The "Providers"
+  section from the Gatsby guide was removed as the plugin itself handles
+  everything already.
+
+- Updated dependencies
+  [[`1d5e55272`](https://github.com/chakra-ui/chakra-ui/commit/1d5e55272fe1475ce6fa0ed5bdccef4218885f77),
+  [`e9ac4cc76`](https://github.com/chakra-ui/chakra-ui/commit/e9ac4cc7629cd79efc753b4e3353bacdad46cd7d)]:
+  - @chakra-ui/react@1.6.0
+  - @chakra-ui/utils@1.7.0
+  - @chakra-ui/props-docs@1.0.25
+  - @chakra-ui/theme-tools@1.1.6
+
+## 1.2.3
+
+### Patch Changes
+
+- Updated dependencies
+  [[`0974e547c`](https://github.com/chakra-ui/chakra-ui/commit/0974e547c29e4efc1ba4d1eb1507d0dad7d7a77a),
+  [`59ea894a7`](https://github.com/chakra-ui/chakra-ui/commit/59ea894a7e03d16cd7a1b89d00816eafa9fab65d)]:
+  - @chakra-ui/utils@1.6.0
+  - @chakra-ui/react@1.5.2
+  - @chakra-ui/theme-tools@1.1.5
+  - @chakra-ui/props-docs@1.0.24
+
+## 1.2.2
+
+### Patch Changes
+
+- [`059ea7f26`](https://github.com/chakra-ui/chakra-ui/commit/059ea7f262b6f79bf303886f90ca82c02b8fcc78)
+  [#3791](https://github.com/chakra-ui/chakra-ui/pull/3791) Thanks
+  [@navarroaxel](https://github.com/navarroaxel)! - Improve wording for the
+  `use-outside-click` page
+
+- Updated dependencies
+  [[`09aa19b23`](https://github.com/chakra-ui/chakra-ui/commit/09aa19b23544f612ac54c22ad0b344d66b871674),
+  [`8b5eb9654`](https://github.com/chakra-ui/chakra-ui/commit/8b5eb9654affe562795d38a19f732f84732a949d),
+  [`81a40231f`](https://github.com/chakra-ui/chakra-ui/commit/81a40231f12461dcca0fa0cd3c4e9e2c0497a04d)]:
+  - @chakra-ui/react@1.5.1
+  - @chakra-ui/utils@1.5.2
+  - @chakra-ui/props-docs@1.0.23
+  - @chakra-ui/theme-tools@1.1.4
+
 ## 1.2.1
 
 ### Patch Changes

@@ -14,6 +14,537 @@ To better understand the changelog, here are some legends we use:
 - 🚀 Feature
 - 🐛 Bug fix
 
+## 26-05-2021
+
+`@chakra-ui/react@1.6.3`
+
+**Popper** `v2.2.0`
+
+The `popper.js` instance will not be created until the `enabled` option is
+`true`. This improves the render and scroll performance when you use many
+popper-related items.
+
+Affected components: Menu, Popover and Tooltip components
+
+**Media Query** `v1.0.14` Fix issue where `useMediaQuery` does not work as
+expected when use within an `iframe`. The hook now references the correct
+`ownerDocument`
+
+**Styled System** `v1.6.7`
+
+- Fix boolean condition affecting `bgImage` url
+- Fix import type issues caused by the `WithCSSVar` type
+
+## 17-05-2021
+
+`@chakra-ui/react@1.6.2`
+
+**Styled System** `v1.11.0`
+
+Ring
+
+- 🚀 Added ring style props to make it easier to style an element's focus ring
+  shadows. Props are `ring`, `ringColor`, `ringOffset`, and `ringOffsetColor`.
+
+[CodeSandbox Link](https://codesandbox.io/s/ring-colors-4wz1w)
+
+```jsx live=false
+// adds a 2px box-shadow with `gray.400` color
+<Box ring="2px" ringColor="gray.400">
+  Sample
+</Box>
+
+// adds main box-shadow + offset box-shadow
+<Box ring="2px" ringColor="gray.400" ringOffset="3px" ringOffsetColor="white">
+ Sample
+</Box>
+```
+
+Filter Styles
+
+- 🚀 Added css variable based API to apply css filter properties (blur,
+  backdrop-blur) to an element. Props are `filter`, `blur`, `sepia`,
+  `brightness`, `invert`, `saturation`, `backdropFilter`, `backdropBlur`,
+  `sepia`, `saturation`, etc.
+
+To use this API, you'll need to set `filter` to `auto`, same for
+`backdropFilter`.
+
+```jsx live=false
+// adds a 3px blur filter to this element
+<Image src="boruto.png" filter="auto" blur="3px" />
+
+// adds a 3px blur and 40% saturation filter to this element
+<Image src="boruto.png" filter="auto" blur="3px" saturation={0.4} />
+```
+
+Transform Styles
+
+- 🚀 Added css variable based API to apply css transform properties (translateX,
+  translateY, scale, etc.). Props are `translateX`, `translateY`, `rotate`,
+  `scaleX`, `scaleY`, and `scale`.
+
+To use this API, you'll need to set `transform` to `auto` or `auto-gpu` (for the
+GPU accelerated version).
+
+```jsx live=false
+<Circle transform="auto" translateX="4" _hover={{ translateX: "8" }}>
+  <CheckIcon />
+</Circle>
+```
+
+- Add `mixBlendMode`, `backgroundBlendMode`, and `bgBlendMode` props to apply
+  blend modes to elements.
+
+- Automatic wrapping of `backgroundImage` or `bgImage` props with url() so you
+  can just pass the image URL directly.
+
+```jsx live=false
+// You can now do this!
+<Box bgImage="naruto.png" />
+
+// This still works
+<Box bgImage="url(naruto.png)" />
+```
+
+- Text decoration styles: Added `textDecorationColor`, `textDecorationLine`,
+  `textDecorationStyles` style props.
+
+- Add `isolation` style prop to create a new stacking context.
+
+High Contrast Mode
+
+- Fixed issue where setting `outline:0` or `outline:none` and using `box-shadow`
+  for focus outlines don't work in high-contrast mode.
+
+- To fix this, we've added `outline: 2px solid transparent` whenever you set
+  `outline:0` to make your components work in high-constrast mode by default.
+
+[Learn more](https://sarahmhigley.com/writing/whcm-quick-tips/)
+
+- Fix the `_dark` pseudo props to map to
+  `.chakra-ui-dark &, [data-theme=dark] &, &[data-theme=dark]`.
+
+- Added `_light` pseudo props to map to
+  `.chakra-ui-light &, [data-theme=light] &, &[data-theme=light]` for users that
+  prefer to start with dark mode.
+
+- Added `overscroll`, `overscrollX`, and `overscrollY` style prop to manage
+  overscroll behavior of an container.
+
+**Theme** `v1.9.0`
+
+- 🚀 Add blur token values for `filter` and `backdropFilter`.
+
+```jsx live=false
+{
+  "none": 0,
+  "sm": "4px",
+  "base": "8px",
+  "md": "12px",
+  "lg": "16px",
+  "xl": "24px",
+  "2xl": "40px",
+  "3xl": "64px"
+}
+```
+
+**Form Control** `v1.3.6`
+
+- 🐛 Fix issue where FormLabel could not be used without form-control.
+
+**Menu** `v1.6.2`
+
+- 🐛 Fix issue where typeahead overrides input keydown.
+
+**React** `v1.6.2`
+
+- 🐛 `ChakraProvider` now accepts the prop `cssVarsRoot` which defaults to
+  `:host, :root`.
+
+**System** `v1.6.6`
+
+- 🐛 Attach CSS vars to `:host, :root` to fix usage in shadow dom.
+
+**Transition** `v1.3.1`
+
+- 🐛 Fix issue where `onAnimationComplete` is not forwarded to motion element.
+
+## 04-05-2021
+
+`@chakra-ui/react@1.6.1`
+
+**Popover** `v1.7.0`
+
+- 🚀 Add an export for `usePopoverContext` hook.
+
+**Transition** `v1.3.0`
+
+- 🚀 Add support for tweaking the enter-exit transitions. Affected components:
+  `Fade`, `Slide`, `SlideFade`, `SlideScale`, `Collapse`.
+
+```jsx live=false
+<Fade
+  transition={{
+    enter: { duration: 0.3 },
+    exit: { duration: 0.1 },
+  }}
+/>
+```
+
+- 🚀 Fix issue where `Collapse` animation hide overflow when it expands.
+  Collapse transition how shows overflow when it's expanded and hides overflow
+  when it's collapsed.
+
+- 🚀 Add support for `delay` prop for all transition components.
+
+```jsx live=false
+// as a number
+<Fade delay={0.3} />
+
+// or based on state (enter/exit only)
+<Fade delay={{ enter: 0.2 }} />
+
+// or both
+<Fade delay={{ enter: 0.2, exit: 0.1 }} />
+```
+
+Note: this only works when you're using our built-in transition definition. If
+you're passing your own transition definition, pass the delay there.
+
+```jsx live=false
+// adding delay to your custom transition definition
+<Fade
+  transition={{
+    enter: { duration: 0.2, delay: 0.1 },
+  }}
+/>
+```
+
+**Utils** `v1.8.0`
+
+- 🚀 Add types for the return value of `pipe` function.
+- 🚀 Update user agent assertions.
+- 🚀 Add walkObject helper to iterate over all keys including nested.
+
+**React Env** `v1.0.4`
+
+- 🐛 Update mock window.
+
+**Menu** `v1.6.1`
+
+- 🐛 Fix issue where `closeOnSelect` didn't work for menuitem options.
+
+**Modal** `v1.8.5`
+
+- 🐛 Fix types for modal overlay fade config.
+
+**Slider** `v1.2.5`
+
+- 🐛 Fix issue where `onChangeStart` doesnt get called.
+- 🐛 Fix issue where slider thumb remains tabbable when `isDisabled={true}`.
+- 🐛 Fix issue where `onChangeEnd` doesn't get called when you click anywhere on
+  the track.
+
+**Styled System** `v1.10.5`
+
+- 🐛 Refactored the creation of the theme css vars.
+
+## 23-04-2021
+
+`@chakra-ui/react@1.6.0`
+
+**Gatsby Plugin** `v2.0.0`
+
+- 💥 Upgrading to this new major version is recommended for everyone as it fixes
+  hot reloading in Gatsby (Fast Refresh). In the previous version changes to the
+  shadowed theme.js file didn't trigger automatic reloading, and a manual reload
+  was necessary.
+
+- 💥 The `isUsingColorMode` option was removed. The `ChakraProvider` will always
+  use the `ColorModeProvider`.
+- 💥 The `isResettingCSS` option was renamed to `resetCSS`. Those changes were
+  made to use the current ChakraProvider and align the prop names.
+
+Improvements
+
+- Use `ChakraProvider` instead of the outdated `ThemeProvider` pattern.
+- Add `initialColorMode` to the `ColorModeScript`.
+- Allow Fast Refresh reloading of all theme files.
+- Set stricter `peerDependency` on `gatsby` (to ^2.29.3 || ^3.0.0).
+
+**Accordion** `v1.3.0`
+
+- 🚀 Update tabs and accordion to use updated descendants logic.
+
+**Menu** `v1.6.0`
+
+- 🚀 Update menu to use new descendants logic.
+- 🐛 Fix issue where menu doesn't select menu item when the first item is
+  disabled.
+- 🐛 Fix issue where menu doesn't work when an input is used within it.
+- 🐛 Fix issue where menu button doesn't work with truncated text.
+
+**Pin Input** `v1.6.0`
+
+- 🚀 Update pin-input to use the new descendants logic.
+
+**React** `v1.6.0` & **Theme** `v1.8.4`
+
+- 🚀 The `extendTheme` function allows you to pass multiple overrides or
+  extensions:
+
+```jsx live=false
+import {
+  extendTheme,
+  withDefaultColorScheme,
+  withDefaultSize,
+  withDefaultVariant,
+  withDefaultProps,
+} from "@chakra-ui/react"
+
+const customTheme = extendTheme(
+  {
+    colors: {
+      brand: {
+        // ...
+        500: "#b4d455",
+        // ...
+      },
+    },
+  },
+  withDefaultColorScheme({ colorScheme: "brand" }),
+  withDefaultSize({
+    size: "lg",
+    components: ["Input", "NumberInput", "PinInput"],
+  }),
+  withDefaultVariant({
+    variant: "outline",
+    components: ["Input", "NumberInput", "PinInput"],
+  }),
+  // or all in one:
+  withDefaultProps({
+    defaultProps: {
+      colorScheme: "brand",
+      variant: "outline",
+      size: "lg",
+    },
+    components: ["Input", "NumberInput", "PinInput"],
+  }),
+  // optional:
+  yourCustomBaseTheme, // defaults to our chakra default theme
+)
+```
+
+**Tabs** `v1.5.0`
+
+- 🚀 Update tabs and accordion to use updated descendants logic.
+- 🚀 Add support for RTL keyboard navigation.
+
+**Utils** `v1.7.0`
+
+- 🚀 Add `pipe` function.
+- 🚀 Add generic to `isFunction` guard.
+
+**Button** `v1.3.1`
+
+- 🐛 Resolved an issue where the `type` prop of the `Button` component was set
+  to `undefined`.
+
+**Progress** `v1.1.8`
+
+- 🐛 Fix hyperlink to docs.
+
+**React Utils** `v1.1.2`
+
+- 🐛 Update types for `mergeRefs` to include null.
+
+**Gatsby Starter Default** `v0.3.0`
+
+- 🚀 Updates to Gatsby-related documentation to account for the breaking changes
+  made in PR #3841. The "Providers" section from the Gatsby guide was removed as
+  the plugin itself handles everything already.
+
+## 19-04-2021
+
+`@chakra-ui/react@1.5.2`
+
+**Button** `v1.3.0`
+
+- 🚀 Added `spinnerPlacement` prop to allow changing the spinner placement for
+  the button when `isLoading` is `true`. Spinner placement can be either `start`
+  or `end`.
+
+```jsx live=false
+<Button isLoading spinnerPlacement="end">
+  Click me
+</Button>
+```
+
+**Checkbox** `v1.5.0`
+
+- 🚀 Add `isDisabled` prop to `CheckboxGroup`.
+
+**Hooks** `v1.5.0`
+
+- 🚀 Add pan session hook `usePanGesture` for detecting pan gestures.
+- 🚀 Update `useLatestRef` to inline value updates. Not concurrent mode safe but
+  works for now.
+- 🚀 Add `useEventListenerMap` to provide an elegant way of attaching several
+  pointer event to the `document` or an element.
+
+**Menu** `v1.5.0` & **Popover** `v1.6.0` & **Tabs** `v1.4.0`
+
+- 🚀 This change restores the behavior of the `isLazy` prop (which was broken by
+  the previous release) and adds a new `lazyBehavior` prop which configures the
+  behavior of `isLazy`.
+
+If you'd like the content of tab panel, popover and menu components to be
+unmounted when not selected or opened, please continue to use `isLazy`. This is
+the default behavior.
+
+If you'd like the content of tab panel, popover and menu components to remain
+mounted (but hidden) after it was previously selected or opened, use
+`lazyBehavior="keepMounted"` in combination with `isLazy`.
+
+**Utils** `v1.6.0`
+
+- 🚀 Add lazy content utility for disclosure components like popover, menu, tab,
+  etc.
+- 🚀 Add pan session class to handle pan gestures. This is used in the slider
+  logic and sharable with vue library.
+- 🚀 Perfomance: Throttle pan move events to once per frame which improves the
+  slider's `onChange` call performance.
+- 🚀 Update types for internal pointer event.
+
+**React Env** `v1.0.2`
+
+- 🐛 Fix bug where `EnvProvider` breaks SSR.
+
+**Modal** `v1.8.3` & **Theme** `v1.8.3`
+
+- 🐛 Fixed an issue where the modal exceeded the viewport height on iOS.
+
+**Slider** `v1.2.3`
+
+- 🐛 Fix issue where slider doesnt work after first slide.
+- 🐛 Avoid exccess `onChange` calls.
+
+**Stat** `v1.1.7`
+
+- 🐛 Fixed a11y issue related to `StatHelpText`. It was using an invalid `dl`
+  child tag.
+
+**Styled System** `v1.10.3`
+
+- 🐛 Fixed an issue where thtransition props are not resolved correctly.
+
+## 13-04-2021
+
+`@chakra-ui/react@1.5.1`
+
+**Hooks** `v1.4.0`
+
+- 🚀 Add support for passing function that returns element to `useEventListener`
+  and `usePointerEvent`.
+
+**Menu** `v1.4.0`
+
+- 🚀 Add `closeOnSelect` to `MenuItem` and `MenuItemOption`.
+- 🐛 Do not unmount menu list after first render.
+- 🐛 Use prop getter from use-popper to prevent ssr content jump.
+
+**Transition** `v1.2.0`
+
+- 🚀 Allow custom transition variants.
+
+**Button** `v1.2.2`
+
+- 🐛 Fix alignment of icon inside button.
+- 🐛 Update button group styles to use rtl-friendly equivalent.
+
+**Clickable** `v1.1.2`
+
+- 🐛 Add missing dependency issue of `@chakra-ui/react-util`.
+
+**Editable** `v1.1.2`
+
+- 🐛 Update focus-on-mousedown util to avoid memory leak.
+
+**React Env** `v1.0.1`
+
+- 🐛 Fix issue where window could be null Skip logic when `environment` prop is
+  passed.
+
+**Input** `v1.2.2`
+
+- 🐛 Remove unused padding-x from input element.
+
+- 🐛 Update input addon and element style handling.
+
+**Layout** `v1.4.2`
+
+- 🐛 Fix RTL styles for OrderedList and UnorderedList.
+
+**Popover** `v1.5.1`
+
+- 🐛 Fix RTL styles for close button.
+
+- 🐛 Do not unmount lazy popovers after first render.
+
+- 🐛 Update focus-onmousedown to avoid memory leak.
+
+- 🐛 Use prop-getters from use-popper to prevent ssr content shift.
+
+**Popper** `v2.1.1`
+
+- 🐛 Update README for the `popper.js` wrapper.
+
+**Progress** `v1.1.6`
+
+- 🐛 Fix an issue where `CircularProgress` with `isIndeterminate` doesn't show
+  the indicator
+
+**React** `v1.5.1`
+
+- 🐛 Fixed typing issues for `extendTheme` where variant overrides lead to an TS
+  error.
+
+- 🐛 Add `EnvironmentProvider` to `ChakraProvider` for better window and
+  document detection across hooks and components.
+
+**Spinner** `v1.1.6`
+
+- 🐛 Fix issue where spinner base-style cant be overriden.
+
+**System** `v1.6.2`
+
+- 🐛 Allow passing custom props to `useStyleConfig`.
+- 🐛 Add missing dependency issue of `@chakra-ui/react-utils`.
+
+**Tabs** `v1.3.2`
+
+- 🐛 Do not unmount lazy tabs when unselected.
+
+**Theme** `v1.8.2`
+
+- 🐛 Changes incorrect `panel` part name in `Progress` theme file to `label`.
+
+- 🐛 Update input, alert and tabs RTL styles.
+
+**Toast** `v1.2.3`
+
+- 🐛 Fix RTL styles for toast component.
+
+**Tool tip** `v1.2.3`
+
+- 🐛 Use prop-getters from use-popper to prevent ssr content shift.
+- 🐛 Add missing dependency issue of `@chakra-ui/react-utils`.
+
+**Utils** `v1.5.2`
+
+- 🐛 update type signature for `px` function.
+
 ## 07-04-2021
 
 `@chakra-ui/react@1.5.0`

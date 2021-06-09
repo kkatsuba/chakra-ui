@@ -1,5 +1,52 @@
 # Change Log
 
+## 1.1.9
+
+### Patch Changes
+
+- Updated dependencies
+  [[`d0f50a46e`](https://github.com/chakra-ui/chakra-ui/commit/d0f50a46ea6c2bcf06d8cad8b9b3994fd934be01),
+  [`b479ff22e`](https://github.com/chakra-ui/chakra-ui/commit/b479ff22ea10c1a1393224c37c36aa6ceabc4aab),
+  [`07d15eab4`](https://github.com/chakra-ui/chakra-ui/commit/07d15eab480724f8fee1a09b7cecdf1e968d9ddd)]:
+  - @chakra-ui/utils@1.8.0
+  - @chakra-ui/theme-tools@1.1.7
+
+## 1.1.8
+
+### Patch Changes
+
+- [`946f8eab5`](https://github.com/chakra-ui/chakra-ui/commit/946f8eab5b98036db372dc0c85c9e5354c565b58)
+  [#3858](https://github.com/chakra-ui/chakra-ui/pull/3858) Thanks
+  [@antoniel](https://github.com/antoniel)! - Fix hyperlink to docs
+
+- Updated dependencies
+  [[`e9ac4cc76`](https://github.com/chakra-ui/chakra-ui/commit/e9ac4cc7629cd79efc753b4e3353bacdad46cd7d)]:
+  - @chakra-ui/utils@1.7.0
+  - @chakra-ui/theme-tools@1.1.6
+
+## 1.1.7
+
+### Patch Changes
+
+- Updated dependencies
+  [[`0974e547c`](https://github.com/chakra-ui/chakra-ui/commit/0974e547c29e4efc1ba4d1eb1507d0dad7d7a77a),
+  [`59ea894a7`](https://github.com/chakra-ui/chakra-ui/commit/59ea894a7e03d16cd7a1b89d00816eafa9fab65d)]:
+  - @chakra-ui/utils@1.6.0
+  - @chakra-ui/theme-tools@1.1.5
+
+## 1.1.6
+
+### Patch Changes
+
+- [`dd2257935`](https://github.com/chakra-ui/chakra-ui/commit/dd225793575ff88aa2a2114a5840150ac3cf744c)
+  [#3768](https://github.com/chakra-ui/chakra-ui/pull/3768) Thanks
+  [@lorenzorapetti](https://github.com/lorenzorapetti)! - Fix an issue where
+  `CircularProgress` with `isIndeterminate` doesn't show the indicator
+- Updated dependencies
+  [[`8b5eb9654`](https://github.com/chakra-ui/chakra-ui/commit/8b5eb9654affe562795d38a19f732f84732a949d)]:
+  - @chakra-ui/utils@1.5.2
+  - @chakra-ui/theme-tools@1.1.4
+
 ## 1.1.5
 
 ### Patch Changes

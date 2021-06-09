@@ -1,5 +1,74 @@
 # Change Log
 
+## 1.3.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`d0f50a46e`](https://github.com/chakra-ui/chakra-ui/commit/d0f50a46ea6c2bcf06d8cad8b9b3994fd934be01),
+  [`b479ff22e`](https://github.com/chakra-ui/chakra-ui/commit/b479ff22ea10c1a1393224c37c36aa6ceabc4aab),
+  [`07d15eab4`](https://github.com/chakra-ui/chakra-ui/commit/07d15eab480724f8fee1a09b7cecdf1e968d9ddd)]:
+  - @chakra-ui/utils@1.8.0
+  - @chakra-ui/spinner@1.1.9
+
+## 1.3.1
+
+### Patch Changes
+
+- [`ad8a7b9f1`](https://github.com/chakra-ui/chakra-ui/commit/ad8a7b9f1064bba04a8f9cc022de2d773ab1e331)
+  [#3875](https://github.com/chakra-ui/chakra-ui/pull/3875) Thanks
+  [@antoniel](https://github.com/antoniel)! - Resolved an issue where the `type`
+  prop of the `Button` component was set to `undefined`.
+- Updated dependencies
+  [[`82f08867f`](https://github.com/chakra-ui/chakra-ui/commit/82f08867fa4825d647a3b9cc805220d9364f2f3f),
+  [`e9ac4cc76`](https://github.com/chakra-ui/chakra-ui/commit/e9ac4cc7629cd79efc753b4e3353bacdad46cd7d)]:
+  - @chakra-ui/react-utils@1.1.2
+  - @chakra-ui/utils@1.7.0
+  - @chakra-ui/spinner@1.1.8
+
+## 1.3.0
+
+### Minor Changes
+
+- [`aec2aaf9d`](https://github.com/chakra-ui/chakra-ui/commit/aec2aaf9d6e7fb43855ae7e3b238ee043ec2c533)
+  [#3732](https://github.com/chakra-ui/chakra-ui/pull/3732) Thanks
+  [@jatin33](https://github.com/jatin33)! - Added `spinnerPlacement` prop to
+  allow changing the spinner placement for the button when `isLoading` is
+  `true`. Spinner placement can be either `start` or `end`
+
+  ```jsx live=false
+  <Button isLoading spinnerPlacement="end">
+    Click me
+  </Button>
+  ```
+
+### Patch Changes
+
+- Updated dependencies
+  [[`0974e547c`](https://github.com/chakra-ui/chakra-ui/commit/0974e547c29e4efc1ba4d1eb1507d0dad7d7a77a),
+  [`59ea894a7`](https://github.com/chakra-ui/chakra-ui/commit/59ea894a7e03d16cd7a1b89d00816eafa9fab65d)]:
+  - @chakra-ui/utils@1.6.0
+  - @chakra-ui/spinner@1.1.7
+
+## 1.2.2
+
+### Patch Changes
+
+- [`3ff53e4e3`](https://github.com/chakra-ui/chakra-ui/commit/3ff53e4e3857b94c4fc18b8e02cf914bdff860e1)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Fix alignment of
+  icon inside button
+
+* [`9fcccbe34`](https://github.com/chakra-ui/chakra-ui/commit/9fcccbe348f87fb4a386450e5327bb578e14cb16)
+  [#3765](https://github.com/chakra-ui/chakra-ui/pull/3765) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Update button group styles
+  to use rtl-friendly equivalent
+
+* Updated dependencies
+  [[`8b5eb9654`](https://github.com/chakra-ui/chakra-ui/commit/8b5eb9654affe562795d38a19f732f84732a949d),
+  [`3ff53e4e3`](https://github.com/chakra-ui/chakra-ui/commit/3ff53e4e3857b94c4fc18b8e02cf914bdff860e1)]:
+  - @chakra-ui/utils@1.5.2
+  - @chakra-ui/spinner@1.1.6
+
 ## 1.2.1
 
 ### Patch Changes

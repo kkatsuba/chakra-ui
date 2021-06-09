@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from "react"
-import { useProxy } from "valtio"
+import { useSnapshot } from "valtio"
 import { MachineSrc } from "./machine"
 import { Dict } from "./types"
 
@@ -14,8 +14,10 @@ export function useMachine<C extends Dict, S extends string>(
   )
   useSafeLayoutEffect(() => {
     service.start()
-    return () => service.stop()
+    return () => {
+      service.stop()
+    }
   }, [service])
-  const state = useProxy(service.state)
-  return [state, service.send] as const
+  const state = useSnapshot(service.state)
+  return [state, service.send, service] as const
 }

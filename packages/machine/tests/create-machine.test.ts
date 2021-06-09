@@ -34,9 +34,10 @@ test("it works", () => {
       "current": "idle",
       "done": false,
       "event": "machine.init",
+      "hasTag": [Function],
       "matches": [Function],
       "prev": "",
-      Symbol(): 0,
+      "tags": Set {},
     }
   `)
 
@@ -50,9 +51,10 @@ test("it works", () => {
       "current": "idle",
       "done": false,
       "event": "INC",
+      "hasTag": [Function],
       "matches": [Function],
       "prev": "idle",
-      Symbol(): 0,
+      "tags": Set {},
     }
   `)
 
@@ -65,9 +67,10 @@ test("it works", () => {
       "current": "idle",
       "done": false,
       "event": "DEC",
+      "hasTag": [Function],
       "matches": [Function],
       "prev": "idle",
-      Symbol(): 0,
+      "tags": Set {},
     }
   `)
 })

@@ -10,12 +10,13 @@ import {
   useColorModeValue,
   useDisclosure,
   useUpdateEffect,
+  HTMLChakraProps,
 } from "@chakra-ui/react"
 import siteConfig from "configs/site-config"
 import { useViewportScroll } from "framer-motion"
 import NextLink from "next/link"
 import React from "react"
-import { FaMoon, FaSun } from "react-icons/fa"
+import { FaMoon, FaSun, FaYoutube } from "react-icons/fa"
 import Logo, { LogoIcon } from "./logo"
 import { MobileNavButton, MobileNavContent } from "./mobile-nav"
 import Search from "./omni-search"
@@ -70,9 +71,9 @@ function HeaderContent() {
         <Flex
           justify="flex-end"
           w="100%"
-          maxW="824px"
           align="center"
           color="gray.400"
+          maxW="1100px"
         >
           <Search />
           <VersionSwitcher
@@ -105,6 +106,20 @@ function HeaderContent() {
                 _hover={{ color: "gray.600" }}
               />
             </Link>
+            <Link
+              isExternal
+              aria-label="Go to Chakra UI YouTube channel"
+              href={siteConfig.youtube}
+            >
+              <Icon
+                as={FaYoutube}
+                display="block"
+                transition="color 0.2s"
+                w="5"
+                h="5"
+                _hover={{ color: "gray.600" }}
+              />
+            </Link>
           </HStack>
           <IconButton
             size="md"
@@ -129,7 +144,7 @@ function HeaderContent() {
   )
 }
 
-function Header(props) {
+function Header(props: HTMLChakraProps<"header">) {
   const bg = useColorModeValue("white", "gray.800")
   const ref = React.useRef<HTMLHeadingElement>()
   const [y, setY] = React.useState(0)
@@ -154,7 +169,7 @@ function Header(props) {
       width="full"
       {...props}
     >
-      <chakra.div height="4.5rem" mx="auto" maxW="1200px">
+      <chakra.div height="4.5rem" mx="auto" maxW="8xl">
         <HeaderContent />
       </chakra.div>
     </chakra.header>
